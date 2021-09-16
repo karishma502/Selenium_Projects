@@ -2,17 +2,18 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 
 namespace Selenium_Projects
 {
-    class Locate_By_Link
+    class AttributeSelectors
     {
         static void Main(string[] args)
         {
-            //Assignment 3 ---- LinkText
+            //Assigmnet 2---- locate by name
 
             Console.WriteLine("Hello World");
             //Launch Chrome
@@ -21,12 +22,14 @@ namespace Selenium_Projects
             driver.Manage().Window.Maximize();
             //Launch Url
             driver.Url = ("https://www.google.co.in/");
-            //Open Link
-            //driver.Url = ("https://web.whatsapp.com/");
-            driver.FindElement(By.LinkText("Gmail")).Click();
+            //Search selenium in search box
+           // driver.FindElement(By.CssSelector("input[role='combobox']")).SendKeys("selenium");
+            //driver.FindElement(By.CssSelector("input[role^='comb']")).SendKeys("selenium");
+            //driver.FindElement(By.CssSelector("input[role*='bob']")).SendKeys("selenium");
+            driver.FindElement(By.CssSelector("input[role$='box']")).SendKeys("selenium");
             // Close the Browser
-            // driver.Close();
+            Thread.Sleep(3000);
+            //driver.Close();
         }
-
     }
 }

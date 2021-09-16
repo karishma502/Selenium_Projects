@@ -5,33 +5,28 @@ using System.Text;
 using System.Threading.Tasks;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
-using OpenQA.Selenium.Firefox;
 
 namespace Selenium_Projects
 {
-    class Assigmnet_1
+    class Open_Website_click
     {
         static void Main(string[] args)
         {
-            // Assignment 1 -----open browesr and maximize screen
-
             Console.WriteLine("Hello World");
+
             //Launch Chrome
-            IWebDriver driver = new  FirefoxDriver("C:\\Users\\HP\\Desktop\\c# notes\\selenium");
-       
+            IWebDriver driver = new ChromeDriver("C:\\Users\\HP\\Desktop\\c# notes\\selenium\\chromedriver_win32");
             //Maximize the Browser
             driver.Manage().Window.Maximize();
             //Launch Url
-            //driver.Url=("https://www.google.co.in/");
-            driver.Url = "http://www.microsoft.com";
-            //Search selenium in search box
-
+            //driver.Url = ("https://www.google.co.in/");
+            //Open Link
+            driver.Url = "https://www.w3schools.com/jsref/met_win_alert.asp";
+            driver.FindElement(By.LinkText("Try it Yourself »")).Click();
+            driver.FindElement(By.LinkText("Try it")).Click();
             // Close the Browser
-            driver.Close();
+            // driver.Close();
 
-            
-
-           
         }
     }
 }

@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Selenium_Projects.Signup_By_Id</StartupObject>
+    <StartupObject>Selenium_Projects.RadioButton</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -48,14 +48,29 @@
     <Reference Include="WebDriver, Version=3.141.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Selenium.WebDriver.3.141.0\lib\net45\WebDriver.dll</HintPath>
     </Reference>
+    <Reference Include="WebDriver.Support, Version=3.141.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Selenium.Support.3.141.0\lib\net45\WebDriver.Support.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AbsuluteXpathDemo.cs" />
+    <Compile Include="AttributeSelectors.cs" />
+    <Compile Include="RadioButton.cs" />
+    <Compile Include="CssSellector.cs" />
+    <Compile Include="LocateByLinkText.cs" />
     <Compile Include="Locate_By_Name.cs" />
     <Compile Include="Locate_By_Link.cs" />
     <Compile Include="Chromedriver.cs" />
     <Compile Include="Assigmnet_1.cs" />
+    <Compile Include="CheckboxSelect.cs" />
+    <Compile Include="Open Website_click.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RelativeXpath Demo.cs" />
+    <Compile Include="RetriveTitle.cs" />
+    <Compile Include="Multiselect.cs" />
+    <Compile Include="SelectDropDownDemo.cs" />
     <Compile Include="Signup_By_Id.cs" />
+    <Compile Include="TagNameSelector.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

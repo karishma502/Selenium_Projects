@@ -5,27 +5,26 @@ using System.Text;
 using System.Threading.Tasks;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Support.UI;
 
 namespace Selenium_Projects
 {
-    class Locate_By_Link
+    class CheckboxSelect
     {
         static void Main(string[] args)
         {
-            //Assignment 3 ---- LinkText
-
             Console.WriteLine("Hello World");
+
             //Launch Chrome
             IWebDriver driver = new ChromeDriver("C:\\Users\\HP\\Desktop\\c# notes\\selenium\\chromedriver_win32");
             //Maximize the Browser
             driver.Manage().Window.Maximize();
             //Launch Url
-            driver.Url = ("https://www.google.co.in/");
-            //Open Link
-            //driver.Url = ("https://web.whatsapp.com/");
-            driver.FindElement(By.LinkText("Gmail")).Click();
-            // Close the Browser
-            // driver.Close();
+            driver.Url = "https://accounts.google.com/signup/v2/webcreateaccount?continue=https%3A%2F%2Fmyaccount.google.com%3Futm_source%3Daccount-marketing-page%26utm_medium%3Dcreate-account-button&flowName=GlifWebSignIn&flowEntry=SignUp";
+            IWebElement check_box = driver.FindElement(By.XPath("//div[@jsname='ornU0b']//input"));
+            check_box.Click();
+           
+           
         }
 
     }

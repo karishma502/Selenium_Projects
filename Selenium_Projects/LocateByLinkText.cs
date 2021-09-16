@@ -8,11 +8,11 @@ using OpenQA.Selenium.Chrome;
 
 namespace Selenium_Projects
 {
-    class Locate_By_Link
+    class LocateByLinkText
     {
         static void Main(string[] args)
         {
-            //Assignment 3 ---- LinkText
+           
 
             Console.WriteLine("Hello World");
             //Launch Chrome
@@ -23,10 +23,16 @@ namespace Selenium_Projects
             driver.Url = ("https://www.google.co.in/");
             //Open Link
             //driver.Url = ("https://web.whatsapp.com/");
-            driver.FindElement(By.LinkText("Gmail")).Click();
+            IReadOnlyCollection<IWebElement> links = driver.FindElements(By.TagName("style"));
+            Console.WriteLine(links.Count);
+            foreach (IWebElement link in links)
+            {
+                Console.WriteLine(link.Text);
+            }
             // Close the Browser
             // driver.Close();
         }
 
     }
 }
+

@@ -8,7 +8,7 @@ using OpenQA.Selenium.Chrome;
 
 namespace Selenium_Projects
 {
-    class Locate_By_Link
+    class RetriveTitle
     {
         static void Main(string[] args)
         {
@@ -21,12 +21,14 @@ namespace Selenium_Projects
             driver.Manage().Window.Maximize();
             //Launch Url
             driver.Url = ("https://www.google.co.in/");
-            //Open Link
-            //driver.Url = ("https://web.whatsapp.com/");
+            string title = driver.Title;
+            Console.WriteLine(title);
+           
             driver.FindElement(By.LinkText("Gmail")).Click();
+            title = driver.Title;
+            Console.WriteLine(title);
             // Close the Browser
             // driver.Close();
         }
-
     }
 }

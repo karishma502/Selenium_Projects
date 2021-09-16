@@ -24,7 +24,8 @@ namespace Selenium_Projects
             //write Username
             driver.FindElement(By.Id("firstName")).SendKeys("Karishma");
             driver.FindElement(By.Id("lastName")).SendKeys("Kate");
-            driver.FindElement(By.ClassName("VfPpkd-vQzf8d")).Click();
+            //driver.FindElement(By.CssSelector("#firstName")).SendKeys("karishma");
+            //driver.FindElement(By.ClassName("VfPpkd-vQzf8d")).Click();
             // Close the Browser
              //driver.Close();
         }
